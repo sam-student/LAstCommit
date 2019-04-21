@@ -1,0 +1,74 @@
+{% load static %}
+<! doctype html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Home</title>
+      {% include "base/css.html" %}
+      {% block base_head %}{% endblock %}
+  </head>
+
+  <body>
+
+    {% include "base/navbar.html" with brand_name="Mogads" %}
+    {% block content %}{% endblock %}
+<!--{#    {% include "base/footer.html" %}#}-->
+
+
+
+ {% include "base/js.html" %}
+  
+  <!--<script>-->
+    <!--$(document).ready(function () {-->
+        <!--var productForm = $(".form-product-ajax")-->
+
+        <!--productForm.submit(function(event) {-->
+            <!--event.preventDefault();-->
+            <!--console.log("Form us not working")-->
+            <!--var thisForm = $(this)-->
+            <!--var actionEndpoint = thisForm.attr("action");-->
+            <!--var httpMethod = thisForm.attr("method");-->
+            <!--var formData = thisForm.serialize();-->
+
+            <!--$.ajax({-->
+              <!--url: actionEndpoint,-->
+              <!--method: httpMethod,-->
+              <!--data: formData,-->
+              <!--success: function(data){-->
+                  <!--console.log("success")-->
+                  <!--console.log(data)-->
+                  <!--console.log("Added", data.added)-->
+                  <!--console.log("Removed", data.removed)-->
+
+                  <!--// var submitSpan = thisForm.find('.submit-span')-->
+                  <!--// if (data.added){-->
+                  <!--//     submitSpan.html()-->
+                  <!--// } else{-->
+                  <!--//     submitSpan.html()-->
+                  <!--// }-->
+              <!--},-->
+              <!--error: function (errorData) {-->
+                <!--console.log("error")-->
+                <!--console.log(errorData)-->
+              <!--}-->
+
+            <!--})-->
+
+
+
+
+        <!--})-->
+    <!--})-->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+  <!--</script>-->
+
+  </body>
+</html>

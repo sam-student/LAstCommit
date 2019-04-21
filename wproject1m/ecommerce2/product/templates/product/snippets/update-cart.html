@@ -1,0 +1,22 @@
+ <form class='form-product-ajax' method="POST" action='{% url "cart:update" %}' class="form"> {% csrf_token %}
+<!--{#      <div class="input-group">#}-->
+<!--{#        <input class="form-control"  type="search" placeholder="Search" name="q" aria-label="Search" value="{{ request.GET.q }}">#}-->
+<!--{#      <span class="input-group-btn">#}-->
+<!--{#          <button class="btn btn-outline-success " type="submit">Search</button>#}-->
+<!--{#          </span>#}-->
+<!--{# </div>#}-->
+    <input type="hidden" name="product_id" value="{{ product.id }}" />
+     {% if in_cart %}
+        <button type="submit" class="btn btn-link">Remove</button>
+     {% else %}
+        <span class="submit-span">
+         {% if object in cart.product.all %}
+
+            In cart<button type='submit' style=' backkground-color: #daad86;color: black ; margin-left:40%'>Remove</button>
+         {% else %}
+            <button type='submit' style=" backkground-color: #daad86;color: black ;margin-left:30%;font-size:140%"><strong>Add to cart</strong></button>
+
+         {% endif %}
+         </span>
+     {% endif %}
+          </form>

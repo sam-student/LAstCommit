@@ -1,0 +1,19 @@
+<div class="card" style="width: 18rem;">
+         {% if instance.image %}
+             <a href="{{ instance.get_absolute_url }}"><img class="card-img-top" src="{{ instance.image.url}}" alt="Card image cap">
+            </a>
+         {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ instance.title }}</h5>
+{#                <p class="card-text">{{ instance.description|truncatewords:8 }}</p>#}
+{#                <p class="card-text">RS  {{ instance.price }}  </p>#}
+                  <h6 class="card-text"> Reviews  {{ instance.Review_count }}</h6>
+                  <h6 class="card-text"> Rating  {{ instance.Average_Rating }} /5</h6>
+
+                  <a href="{{ instance.get_absolute_url }}" class="btn btn-primary" style="width: 170px">View</a>
+{#                  <!--<a href="{% url "products:detail" slug=instance.slug %}" class="btn btn-warning">URL shortcut</a>-->#}
+
+                </div>
+        </div>
+
+
